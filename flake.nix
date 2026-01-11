@@ -10,6 +10,7 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.follows = "nixpkgs-unstable";
     openwrt-one-nix.inputs.mixos.follows = "mixos";
+    openwrt-one-nix.inputs.nixpkgs.follows = "nixpkgs";
     openwrt-one-nix.url = "github:jmbaur/openwrt-one.nix";
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs-unstable";
     treefmt-nix.url = "github:numtide/treefmt-nix";

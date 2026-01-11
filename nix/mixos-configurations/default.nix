@@ -1,7 +1,8 @@
 inputs:
 
 let
-  inherit (inputs.nixpkgs.lib) filterAttrs const mapAttrs;
+  inherit (builtins) mapAttrs;
+  inherit (inputs.nixpkgs.lib) filterAttrs const;
 in
 
 mapAttrs (
@@ -12,7 +13,7 @@ mapAttrs (
       inputs.openwrt-one-nix.mixosModules.default
       {
         nixpkgs = {
-          inherit (inputs) nixpkgs;
+          nixpkgs = inputs.nixpkgs-unstable; # needed for kernel 6.18, not in 25.05
           overlays = [ inputs.self.overlays.default ];
         };
       }
