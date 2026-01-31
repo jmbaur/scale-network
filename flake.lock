@@ -20,6 +20,26 @@
         "type": "github"
       }
     },
+    "mixos": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1769905792,
+        "narHash": "sha256-3fa60y8M/VXkY+ansN/8JT1Aky3JMj8BISrOwOGtU7A=",
+        "owner": "jmbaur",
+        "repo": "mixos",
+        "rev": "25ee2584631ffabff779ddcce9759ba91afa5133",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jmbaur",
+        "repo": "mixos",
+        "type": "github"
+      }
+    },
     "nixpkgs-2505": {
       "locked": {
         "lastModified": 1756809922,
@@ -52,11 +72,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1756542300,
-        "narHash": "sha256-tlOn88coG5fzdyqz6R93SQL5Gpq+m/DsWpekNFhqPQk=",
+        "lastModified": 1769461804,
+        "narHash": "sha256-msG8SU5WsBUfVVa/9RPLaymvi5bI8edTavbIq3vRlhI=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d7600c775f877cd87b4f5a831c28aa94137377aa",
+        "rev": "bfc1b8a4574108ceef22f02bafcf6611380c100d",
         "type": "github"
       },
       "original": {
@@ -66,15 +86,40 @@
         "type": "github"
       }
     },
+    "openwrt-one-nix": {
+      "inputs": {
+        "mixos": [
+          "mixos"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1769923696,
+        "narHash": "sha256-PFmcfwrwI+JRKQJR4Du1/cqMAsxabLQCIcnIEyyz3vE=",
+        "owner": "jmbaur",
+        "repo": "openwrt-one.nix",
+        "rev": "20ff9bf71a72df2a1a1df958e8ec810b8271306a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jmbaur",
+        "repo": "openwrt-one.nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "disko": "disko",
+        "mixos": "mixos",
         "nixpkgs": [
           "nixpkgs-unstable"
         ],
         "nixpkgs-2505": "nixpkgs-2505",
         "nixpkgs-lib": "nixpkgs-lib",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "openwrt-one-nix": "openwrt-one-nix",
         "treefmt-nix": "treefmt-nix"
       }
     },

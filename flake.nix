@@ -4,10 +4,15 @@
   inputs = {
     disko.inputs.nixpkgs.follows = "nixpkgs-unstable";
     disko.url = "github:nix-community/disko";
+    mixos.url = "github:jmbaur/mixos";
+    mixos.inputs.nixpkgs.follows = "nixpkgs-unstable";
     nixpkgs-2505.url = "github:NixOS/nixpkgs";
     nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.follows = "nixpkgs-unstable";
+    openwrt-one-nix.inputs.mixos.follows = "mixos";
+    openwrt-one-nix.inputs.nixpkgs.follows = "nixpkgs";
+    openwrt-one-nix.url = "github:jmbaur/openwrt-one.nix";
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs-unstable";
     treefmt-nix.url = "github:numtide/treefmt-nix";
   };
@@ -19,6 +24,7 @@
     formatterModule = import ./nix/formatterModule inputs;
     legacyPackages = import ./nix/legacy-packages inputs;
     library = import ./nix/library inputs;
+    mixosConfigurations = import ./nix/mixos-configurations inputs;
     nixosConfigurations = import ./nix/nixos-configurations inputs;
     nixosModules = import ./nix/nixos-modules inputs;
     overlays = import ./nix/overlays inputs;
